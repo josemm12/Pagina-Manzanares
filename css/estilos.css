@@ -1,0 +1,201 @@
+/* Tipografía y colores */
+html, body {
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+}
+
+/* Estilo del encabezado */
+.header {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header img {
+    max-height: 40px;
+    margin-right: 15px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.header-right {
+    display: flex;
+    gap: 15px;
+}
+
+.header-right a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.header-right a:hover {
+    color: #ffccdf;
+}
+
+/* Estilo del carrusel */
+.carousel-container {
+    width: 90%;
+    max-width: 900px;
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    margin-top: 30px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+/* Estilo de los botones */
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.button {
+    flex: 1;
+    max-width: 250px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button p {
+    margin: 5px 0 0 0;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Estilo de las secciones */
+.sections-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.section h2 {
+    color: #e272b4;
+    font-size: 22px;
+}
+
+.section p {
+    text-align: left;
+    color: #666;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.icon img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.social-icons a {
+    margin: 5px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 35px;
+    height: 35px;
+}
+
+.highlight {
+    border: 2px solid #fff;
+    padding: 15px;
+    font-size: 22px;
+    background-color: #e7b4d3;
+    border-radius: 10px;
+    text-align: center;
+    max-width: 90%;
+    margin: 20px 0;
+}

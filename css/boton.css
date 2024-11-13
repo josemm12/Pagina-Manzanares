@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Barlow';
+    }
+   
+    html {
+        scroll-behavior: smooth;
+}
+
+.old-standard-tt-bold {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+    .menu {
+        display: flex; /* Flexbox para alinear el menú y redes sociales */
+        justify-content: space-between; /* Espacio entre menú y redes */
+        align-items: center; /* Alinear verticalmente */
+        background-color: #000;
+        padding: 28px 200px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Estilo para el menú */
+    .menu ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex; /* Mostrar menú horizontal */
+    }
+    
+    .menu ul li {
+        display: inline-block;
+        margin-right: 20px;
+        position: relative;
+    }
+    
+    .menu ul li a {
+        text-decoration: none;
+        font-size: 18px;
+        color: #fff;
+        padding: 10px 20px;
+        transition: background-color 0.3s, color 0.3s;
+        border-radius: 5px;
+    }
+    
+    .menu ul li a:hover {
+        background-color: #fff;
+        color: #e74c3c;
+    }
+    /* Estilo para redes sociales */
+    .redes {
+        display: flex;
+        align-items: center;
+    }
+    
+    .redes a {
+        color: #fff;
+        margin-left: 15px;
+        font-size: 24px;
+        transition: color 0.3s;
+    }
+    
+    .redes a:hover {
+        color: #fff;
+        text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+    }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>NAGARAKU STORE</h1>
+    <div id="productos">
+        <h2>Productos</h2>
+        <div class="producto">
+            <h3>Pestañas Naturales</h3>
+            <p>Precio: $10.00</p>
+            <button onclick="agregarAlCarrito('Pestañas Naturales', 10)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pestañas Voluminosas</h3>
+            <p>Precio: $12.00</p>
+            <button onclick="agregarAlCarrito('Pestañas Voluminosas', 12)">Agregar al Carrito</button>
+        </div>
+        <div class="producto">
+            <h3>Pestañas Largas</h3>
+            <p>Precio: $15.00</p>
+            <button onclick="agregarAlCarrito('Pestañas Largas', 15)">Agregar al Carrito</button>
+        </div>
+    </div>
+    
+    <div id="carrito">
+        <h2>Carrito de Compras</h2>
+        <ul id="lista-carrito"></ul>
+        <p id="total">Total: $0.00</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

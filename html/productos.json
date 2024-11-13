@@ -1,0 +1,222 @@
+[
+    {
+        "id": "pestañas-01",
+        "titulo": "pestañas 01",
+        "imagen": "../img/pestañas/01.jpg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-02",
+        "titulo": "pestañas 02",
+        "imagen": "../img/pestañas/02.jpg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-03",
+        "titulo": "Pestañas 03",
+        "imagen": "../img/pestañas/03.jpg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-04",
+        "titulo": "pestañas 04",
+        "imagen": "../img/pestañas/04.jpg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-05",
+        "titulo": "pestaña 05",
+        "imagen": "../img/pestañas/06.jpeg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-06",
+        "titulo": "pestañas 06",
+        "imagen": "../img/pestañas/05.jpeg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pestañas-07",
+        "titulo": "pestañas 07",
+        "imagen": "../img/pestañas/07.jpg",
+        "categoria": {
+            "nombre": "Pestañas",
+            "id": "Pestañas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-01",
+        "titulo": "pegantes 01",
+        "imagen": "../img/pegantes/05.jpg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-02",
+        "titulo": "pegantes 02",
+        "imagen": "../img/pegantes/06.jpg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-03",
+        "titulo": "pegantes 03",
+        "imagen": "../img/pegantes/07.jpg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-04",
+        "titulo": "Camiseta 04",
+        "imagen": "../img/pegantes/08.jpg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-05",
+        "titulo": "pegantes 05",
+        "imagen": "../img/pegantes/09.jpeg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "pegantes-06",
+        "titulo": "pegante 06",
+        "imagen": "../img/pegantes/10.jpeg",
+        "categoria": {
+            "nombre": "Pegantes",
+            "id": "Pegantes"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-01",
+        "titulo": "Pinzas 01",
+        "imagen": "../img/pinzas/16.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-02",
+        "titulo": "pinzas 02",
+        "imagen": "../img/pinzas/17.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-03",
+        "titulo": "pinzas 03",
+        "imagen": "../img/pinzas/18.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-04",
+        "titulo": "pinzas 04",
+        "imagen": "../img/pinzas/19.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-05",
+        "titulo": "pinzas 05",
+        "imagen": "../img/otros/11.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-06",
+        "titulo": "pinzas 06",
+        "imagen": "../img/otros/12.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-07",
+        "titulo": "pinzas 07",
+        "imagen": "../img/otros/13.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-08",
+        "titulo": "pinzas 08",
+        "imagen": "../img/otros/14.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "Pinzas-09",
+        "titulo": "pinzas 09",
+        "imagen": "../img/otros/15.jpeg",
+        "categoria": {
+            "nombre": "Pinzas",
+            "id": "Pinzas"
+        },
+        "precio": 1000
+    }
+]   

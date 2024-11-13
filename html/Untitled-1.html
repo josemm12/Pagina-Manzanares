@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Pestañas - MANZANARES</title>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+    <style>
+        #cartModal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid purple;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .cart-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #cartTotal {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .catalog-section {
+            padding: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .product img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .product h3 {
+            margin: 0 0 10px;
+        }
+        .product button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background-color: darkviolet;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <h1>MANZANARES<span class="txtRojo">STORE</span></h1>
+            <nav id="nav">
+                <br>
+                <nav>
+                    <ul>    
+                        <li> <a href="principal.html" onclick="seleccionar()"> INICIO </a></li>
+                        <li><a href="#nosotros" onclick="seleccionar()"> NOSOTROS </a></li>
+                        <li><a href="#servicios" onclick="seleccionar()"> SERVICIOS </a></li>
+                        <li><a href="#comodidades" onclick="seleccionar()"> ENVIOS </a></li>
+                        <li><a href="Contactanos.html" onclick="seleccionar()"> CONTACTO </a></li>
+                        <li><a href="pago.html" onclick="seleccionar()"> PAGO</a></li>
+                        <li><a href="#" id="cartBtn">Carrito (<span id="cartCounter">0</span>)</a></li>
+                        <div class="redes">
+                            <a href="https://web.facebook.com/profile.php?id=61552986394771" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                        </div>
+                    </ul>
+                </nav>
+            </nav>
+        </nav>
+    </header>
+
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 161622.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS NAGARAKU 3D 16 LÍNEAS CAJA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $16.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS NAGARAKU 3D 16 LÍNEAS CAJA" data-price="16000">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Agrega aquí más productos como en el código original -->
+    </section>
+
+    <!-- Modal del carrito -->
+    <div id="cartModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cartItems"></div>
+            <div id="cartTotal">Total: $0</div>
+            <button id="checkoutBtn">Finalizar compra</button>
+        </div>
+    </div>
+
+    <script>
+        const cart = [];
+        const cartCounter = document.getElementById('cartCounter');
+        const cartModal = document.getElementById('cartModal');
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+
+        // Mostrar el carrito
+        document.getElementById('cartBtn').addEventListener('click', () => {
+            cartModal.style.display = 'block';
+            renderCart();
+        });
+
+        // Cerrar el carrito
+        document.querySelector('.close').addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+
+        // Agregar al carrito
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseInt(button.getAttribute('data-price'));
+                cart.push({ name, price });
+                updateCart();
+            });
+        });
+
+        // Actualizar carrito
+        function updateCart() {
+            cartCounter.innerText = cart.length;
+            renderCart();
+        }
+
+        // Renderizar carrito
+        function renderCart() {
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach((item, index) => {
+                const itemDiv = document.createElement('div');
+                itemDiv.classList.add('cart-item');
+                itemDiv.innerHTML = `
+                    <span>${item.name} - $${item.price}</span>
+                    <button class="remove-btn" data-index="${index}">Eliminar</button>
+                `;
+                cartItems.appendChild(itemDiv);
+                total += item.price;
+            });
+            cartTotal.innerText = `Total: $${total}`;
+            attachRemoveHandlers();
+        }
+
+        // Manejar eliminación de ítems del carrito
+        function attachRemoveHandlers() {
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', (e) => {
+                    const index = e.target.getAttribute('data-index');
+                    cart.splice(index, 1);
+                    updateCart();
+                });
+            });
+        }
+
+        // Cerrar el modal al hacer clic fuera de él
+        window.onclick = function(event) {
+            if (event.target === cartModal) {
+                cartModal.style.display = "none";
+            }
+        };
+    </script>
+</body>
+</html>

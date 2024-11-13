@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Pestañas - NAGARAKUSTORE</title>
+    <link rel="stylesheet" href="catalogo.css">
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200;300;400;500;600;700;800;900&display=swap">
+    
+    <style>
+        #cartModal {
+            display: none;
+            position: fixed;
+            z-index: 100;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid purple;
+            width: 80%;
+        }
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .cart-item {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        #cartTotal {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .catalog-section {
+            padding: 20px;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .product img {
+            max-width: 100px;
+            margin-right: 20px;
+        }
+        .product h3 {
+            margin: 0 0 10px;
+        }
+        .product button {
+            background-color: purple;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .product button:hover {
+            background-color: darkviolet;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="menu">
+            <h1>NAGARAKU<span class="txtRojo">STORE</span></h1>
+            <nav id="nav">
+        <br>
+
+                <nav>
+            <ul>    
+                            <ul>
+                            <li> <a href="principal.html" onclick="seleccionar()"> INICIO </a></li>
+                            <li><a href="#nosotros" onclick="seleccionar()"> NOSOTROS </a></li>
+                            <li><a href="#servicios" onclick="seleccionar()"> SERVICIOS </a></li>
+                            <li><a href="#comodidades" onclick="seleccionar()"> ENVIOS </a></li>
+                            <li><a href="Contactanos.html" onclick="seleccionar()"> CONTACTO </a></li>
+                            <li><a href="pago.html" onclick="seleccionar()"> PAGO</a></li>
+                            <li><a href="#" id="cartBtn">Carrito (<span id="cartCounter">0</span>)</a></li>
+                            <div class="redes">
+                            <a href="https://web.facebook.com/profile.php?id=61552986394771" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                
+                    
+            </ul>
+        </nav>
+    </header>
+
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 161622.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS NAGARAKU 3D 16 LÍNEAS CAJA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $16.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS NAGARAKU 3D 16 LÍNEAS CAJA" data-price="16000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 162930.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS NAGARAKU YY 16 LÍNEAS CAJA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $24.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS NAGARAKU YY 16 LÍNEAS CAJA" data-price="24000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 163135.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS LASH</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $21.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS LASH" data-price="21000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 163611.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS NAGARAKU MIXTAS 16 LÍNEAS CAJA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $25.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS NAGARAKU MIXTAS 16 LÍNEAS CAJA" data-price="25000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 163737.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>CAJA DE PESTAÑAS MIXTAS EN L</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $15.000</p>
+                <button class="add-to-cart" data-name="CAJA DE PESTAÑAS MIXTAS EN L" data-price="15000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>Pestañas</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 163844.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PESTAÑAS NAGARAKU 8 COLORES 16 LÍNEAS CAJA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $20.000</p>
+                <button class="add-to-cart" data-name="PESTAÑAS NAGARAKU 8 COLORES 16 LÍNEAS CAJA" data-price="20000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>BIGUDI</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164041.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>BIGUDI DE SILICONA PARA RIZADO</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $10.000</p>
+                <button class="add-to-cart" data-name="BIGUDI DE SILICONA PARA RIZADO" data-price="10000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>LIQUIDO LIMPIADOR DE PESTAÑAS</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164134.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PRIMER SENSE LASH</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $38.000</p>
+                <button class="add-to-cart" data-name="PRIMER SENSE LASH" data-price="38000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>SOPORTE</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164240.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>SOPORTE PARA EXTENSION DE PESTAÑAS CON BANDA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $12.000</p>
+                <button class="add-to-cart" data-name="SOPORTE PARA EXTENSION DE PESTAÑAS CON BANDA" data-price="12000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PEGANTE</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164410.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PEGANTE PROFESIONAL LADY BLACK 5g</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $38.000</p>
+                <button class="add-to-cart" data-name="PEGANTE PROFESIONAL LADY BLACK 5g" data-price="38000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PEGANTE</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164611.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PEGANTE PROFESIONAL SKY ZONE 5g</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $39.000</p>
+                <button class="add-to-cart" data-name="PEGANTE PROFESIONAL SKY ZONE 5g" data-price="39000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>ADHESIVO PROFESIONAL</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 164853.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>ADHESIVO PROFESIONAL SENSE LASH ULTRA BOND 5ML
+                </h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: 40.000</p>
+                <button class="add-to-cart" data-name="ADHESIVO PROFESIONAL SENSE LASH ULTRA BOND 5ML" data-price="40000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PEGANTE</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 165016.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PEGANTE PROFESIONAL SKY RED 5g</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $38.000</p>
+                <button class="add-to-cart" data-name="PEGANTE PROFESIONAL SKY RED 5g" data-price="38000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PEGANTE</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 165058.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PEGANTE PROFESIONAL SKY ROSE 5g</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $40.000</p>
+                <button class="add-to-cart" data-name="PEGANTE PROFESIONAL SKY ROSE 5g" data-price="40000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>CEPILLO</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 165414.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>CEPILLO TIPO PESTAÑINA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $2.500</p>
+                <button class="add-to-cart" data-name="CEPILLO TIPO PESTAÑINA" data-price="2500">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>MICROCEPILLOS</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 165522.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>MICROCEPILLOS</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $5.000</p>
+                <button class="add-to-cart" data-name="MICROCEPILLOS" data-price="5000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>APLICADORES</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 165622.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>APLICADORES HENNA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $26.000</p>
+                <button class="add-to-cart" data-name="APLICADORES HENNA" data-price="26000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>APLICADORES</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 170005.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>APLICADORES DE PIGMENTOS</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $5.000</p>
+                <button class="add-to-cart" data-name="APLICADORES DE PIGMENTOS" data-price="5000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PINZAS</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 170322.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PINZAS NAGARAKU VOLUMEN N-06</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $24.000</p>
+                <button class="add-to-cart" data-name="PINZAS NAGARAKU VOLUMEN N-06" data-price="24000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PINZAS</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 170526.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PINZAS ECONOMICA CURVA Y RECTA</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $13.000</p>
+                <button class="add-to-cart" data-name="PINZAS ECONOMICA CURVA Y RECTA" data-price="13000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>ANILLOS</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 170943.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>ANILLOS DE PEGAMENTO PARA EXTENSIONES DE PESTAÑAS CON DIVISION Y SIN DIVISION</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $7.000</p>
+                <button class="add-to-cart" data-name="ANILLOS DE PEGAMENTO PARA EXTENSIONES DE PESTAÑAS CON DIVISION Y SIN DIVISION" data-price="7000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>CITA
+</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 171050 copy.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>CINTA TRANSPORE</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $4.000</p>
+                <button class="add-to-cart" data-name="CINTA TRANSPORE" data-price="4000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>PAÑO</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 171217.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>PAÑO PARA LIMPIEZA DE BOQUILLA DE PEGANTE</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $3.500</p>
+                <button class="add-to-cart" data-name="PAÑO PARA LIMPIEZA DE BOQUILLA DE PEGANTE" data-price="3500">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <section id="Pestañas" class="catalog-section"> 
+        <h2>VENTILADOR</h2>
+        <div class="product">
+            <img src="Captura de pantalla 2024-09-26 171330.png" alt="Pestañas Nagaraku 3D">
+            <div>
+                <h3>VENTILADOR PORTATIL PARA SECADO DE PESTAÑAS RECARGABLE</h3>
+                <p>Características: Grosor: 0.07, Curva: D.</p>
+                <p>Precio: $20.000</p>
+                <button class="add-to-cart" data-name="VENTILADOR PORTATIL PARA SECADO DE PESTAÑAS RECARGABLE" data-price="20000">Añadir al carrito</button>
+            </div>
+        </div>
+    </section>
+    <!-- Modal Carrito -->
+    <!-- Modal del carrito -->
+    <div id="cartModal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Carrito de Compras</h2>
+            <div id="cartItems"></div>
+            <p id="cartTotal">Total: $0</p>
+        </div>
+    </div>
+
+    <script>
+        // Cart functionality
+        const cart = [];
+        const cartBtn = document.getElementById('cartBtn');
+        const cartModal = document.getElementById('cartModal');
+        const closeModal = document.querySelector('.close');
+        const cartItems = document.getElementById('cartItems');
+        const cartCounter = document.getElementById('cartCounter');
+        const cartTotal = document.getElementById('cartTotal');
+        
+        // Create "Vaciar Carrito" button
+        const emptyCartBtn = document.createElement('button');
+        emptyCartBtn.innerText = 'Vaciar Carrito';
+        emptyCartBtn.style.backgroundColor = 'red';
+        emptyCartBtn.style.color = 'white';
+        emptyCartBtn.style.border = 'none';
+        emptyCartBtn.style.padding = '10px';
+        emptyCartBtn.style.cursor = 'pointer';
+        emptyCartBtn.style.marginTop = '10px';
+        emptyCartBtn.style.borderRadius = '5px';
+    
+        // Create "Pago" button
+        const paymentBtn = document.createElement('button');
+        paymentBtn.innerText = 'Pago';
+        paymentBtn.style.backgroundColor = 'green';
+        paymentBtn.style.color = 'white';
+        paymentBtn.style.border = 'none';
+        paymentBtn.style.padding = '10px';
+        paymentBtn.style.cursor = 'pointer';
+        paymentBtn.style.marginTop = '10px';
+        paymentBtn.style.marginLeft = '10px';
+        paymentBtn.style.borderRadius = '5px';
+    
+        // Append buttons to modal content
+        const modalContent = document.querySelector('.modal-content');
+        modalContent.appendChild(emptyCartBtn);
+        modalContent.appendChild(paymentBtn);
+    
+        document.querySelectorAll('.add-to-cart').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseFloat(button.getAttribute('data-price'));
+    
+                cart.push({ name, price });
+                updateCart();
+            });
+        });
+    
+        cartBtn.addEventListener('click', () => {
+            cartModal.style.display = 'block';
+            renderCartItems();
+        });
+    
+        closeModal.addEventListener('click', () => {
+            cartModal.style.display = 'none';
+        });
+    
+        emptyCartBtn.addEventListener('click', () => {
+            cart.length = 0;  // Vaciar el carrito
+            updateCart();
+            renderCartItems();
+        });
+    
+        paymentBtn.addEventListener('click', () => {
+            if (cart.length > 0) {
+                const total = cart.reduce((sum, item) => sum + item.price, 0);
+                const confirmation = confirm(`Gracias por su compra. Total a pagar: $${total}. ¿Desea continuar al pago?`);
+                if (confirmation) {
+                    window.location.href = "http://localhost/proyecto2/pago.html"; // Redirigir a la página de pago
+                }
+                cart.length = 0;  // Vaciar el carrito después del pago
+                updateCart();
+                renderCartItems();
+            } else {
+                alert('No tienes productos en el carrito.');
+            }
+        });
+    
+        function updateCart() {
+            cartCounter.innerText = cart.length;
+            let total = cart.reduce((sum, item) => sum + item.price, 0);
+            cartTotal.innerText = `$${total}`;
+        }
+    
+        function renderCartItems() {
+            cartItems.innerHTML = '';
+            cart.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.classList.add('cart-item');
+                div.innerHTML = `<span>${item.name}</span><span>$${item.price}</span><button class="remove-btn" data-index="${index}">Eliminar</button>`;
+                cartItems.appendChild(div);
+            });
+    
+            document.querySelectorAll('.remove-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    const index = button.getAttribute('data-index');
+                    cart.splice(index, 1);
+                    updateCart();
+                    renderCartItems();
+                });
+            });
+        }
+    
+        window.onclick = function(event) {
+            if (event.target === cartModal) {
+                cartModal.style.display = 'none';
+            }
+        }
+    </script>
+    
+</body>
+</html>

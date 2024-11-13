@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/principal2.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100|;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Barlow';
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #dde1e9;
+    }
+
+    /* SECCION MENU */
+    .contenedor-header {
+        width: 100%;
+        position: fixed;
+        border-bottom: 1px solid salmon;
+        background-color: rgba(0, 0, 0, .7);
+        z-index: 99;
+        padding: 0 20px;
+    }
+   
+    .contenedor-header header {
+        max-width: 1100px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+        color: white;
+    }
+
+    .contenedor-header i{
+        color: #fff;
+        margin: 5px;
+    }
+    .txtRojo {
+        color: purple;
+    }
+   
+    .contenedor-header header nav a{
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 5px;
+        text-transform: uppercase;
+    }
+
+    .contenedor-header header nav a:hover{
+        color: purple;
+    }
+
+    .contenedor-header header nav .redes a{
+        text-decoration: none;
+        color: #fff;
+        display: inline-block;
+        padding: 5px  8px;
+    }
+
+    .contenedor-header a:hover{
+        color: purple;
+    }
+
+    .redes i:hover {
+        color: purple;
+    }
+
+    .nav-responsive{
+        font-size: 25px;
+    }
+
+    /* Seccion inicio */
+    .inicio {
+        height: 100vh;
+        background: url(hola.jpeg);
+        background-size: cover;
+        background-position: center center;
+        color: black;
+        position: relative;
+    }
+
+    .inicio .contenido-seccion {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .info {
+        text-align: center;
+    }
+    
+    .inicio .info {
+        width: fit-content;
+        margin: auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .inicio .info h2 {
+        font-size: 4rem;
+        letter-spacing: 3px;
+    }
+
+    .inicio .info p {
+        margin: 20px;
+        color: black;
+        font-size: 16px;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+    }
+
+    .inicio .info .btn-mas {
+        width: 50px;
+        margin: auto;
+        height: 50px;
+        border: 2px solid salmon;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        color: salmon;
+        margin-top: 50px;
+        text-decoration: none;
+    }
+
+    .opciones {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .opciones .opcion {
+        border-top: 2px solid purple;
+        padding: 7px;
+        color: purple;
+        margin: 0 20px;
+    }
+
+    /* Seccion nosotros */
+    .nosotros{
+    max-width: 1100px;
+    margin: auto;
+    height: 100vh;
+    background-color: #dde1e9;
+    padding: 100px 20px;
+    }
+
+    .nosotros .fila {
+    display: flex;
+    align-items: center;
+    }
+
+    .nosotros.fila.col{
+    width: 50%;
+    }
+
+    .nosotros .fila .col{
+        width: 80%;
+        display: block;
+        margin: auto;
+        margin-bottom: 50px;    
+    }
+    .nosotros .p-especial{
+        font-size: 25px;
+    }
+    .nosotros .fila .col .contenedor-titulo{
+        display: flex;
+        align-items: center;
+
+    }
+    .nosotros .fila .col .contenedor-titulo .numero{
+        color: purple;
+        font-weight: bold;
+        display: block;
+        font-size: 5rem;
+    }
+
+    .nosotros .fila .col .contenedor-titulo .info{
+        margin-left: 30px;
+    }
+
+    .nosotros .fila .col .contenedor-titulo .info .frase{
+        color: purple;
+    }
+
+    .nosotros .fila .col .contenedor-titulo .info h2{
+     font-size: 3rem;
+    }
+
+    .nosotros .fila .col p{
+        margin-bottom: 10px;
+        line-height: 28px;
+    }
+    .nosotros .fila .col .p-especial{
+    font-weight: bold;
+    }
+
+    .nosotros hr{
+        margin-bottom: 30px;
+    }
+
+    .nosotros .fila-nosotros{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nosotros .fila-nosotros .frase{
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .nosotros .fila-nosotros h2{
+        font-size: 2.5rem;
+    }
+
+    .nosotros .fila-nosotros button{
+        background-color: purple;
+        border: none;
+        color: #fff;
+        padding: 15px 35px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor:pointer;
+    }
+   /* Seccion servicios */
+   
+   
+ 
+/* Estilo para las celdas */
+td{
+    padding: 20px;
+    vertical-align: top;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Iconos de las celdas (agrega tu propia clase de iconos) */
+td i {
+    font-size: 30px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Título de las celdas */
+h3 {
+    font-size: 20px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Párrafos dentro de las celdas */
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Colores para los títulos en rojo */
+.txtRojo {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+/* Estilo para hacer responsiva la tabla */
+@media screen and (max-width: 768px) {
+    table, td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Fondo para cada celda */
+td {
+    background-color: #f9f9f9;
+}
+
+/* Sombra para darle un efecto más moderno */
+td {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Espaciado entre las filas */
+tr {
+    margin-bottom: 20px;
+}
+
+
+    /* SECCION COMODIDADES */
+
+    .comodidades {
+        max-width: 1100px;
+        margin: auto;
+        background-color: #dde1e9;
+        padding: 100px 20px;
+    }
+
+    .comodidades .fila {
+        display: flex;
+        align-items: center;
+    }
+
+    .comodidades .fila .col {
+        width: 50%;
+    }
+
+    .comodidades .fila .col{
+        width: 90%;
+        display: block;
+        margin: auto;
+    }
+
+    .comodidades img{
+        width: 700px;
+        margin-right: 30px;
+    }
+    .comodidades .fila .col .contenedor-titulo{
+        display: flex;
+        align-items: center;
+    }
+
+    .comodidades .fila .col .contenedor-titulo .numero{
+        color: purple;
+        font-weight: bold;
+        display: block;
+        font-size: 5rem;
+    }
+
+    .comodidades .fila .col .contenedor-titulo .info{
+        margin-left: 30px;
+    }
+
+    .comodidades .fila .col .contenedor-titulo .info .frase{
+        color: purple
+    }
+
+    .comodidades .fila .col .contenedor-titulo .info h2{
+    font-size: 4rem;
+    }
+
+    .comodidades .fila .col p{
+        margin-bottom: 10px;
+        line-height: 28px;
+    }
+
+    .comodidades .fila .col .p-especial{
+        font-weight: bold;
+        font-size: 25px;
+    }
+
+    .comodidades .fila .col li{
+        margin-bottom: 10px;
+        line-height: 20px;
+        font-size: 25px;
+    }
+
+    .comodidades .fila .col li span {
+        color: purple;
+        font-weight: bold;
+    }
+
+    /* SECCION GALERIA */
+
+    .galeria {
+        color: #fff;
+        background: linear-gradient(rgb(255, 91, 214), rgb(0, 0, 0));
+        background: url(hola.jpeg);
+        background-size: cover;
+        background-position: center center;
+        padding: 100px 0;
+        height: 100vh;
+    }
+
+    .galeria .contenido-seccion{
+        max-width: 1100px;
+        margin: auto;
+        padding: 0 20px;
+    }
+
+    .galeria .contenedor-titulo{
+        display: flex;
+        align-items: center;
+    }
+
+    .galeria .contenedor-titulo .numero{
+        color: purple;
+        font-weight: bold;
+        display: block;
+        font-size: 5rem;
+    }
+
+    .galeria .contenedor-titulo .info{
+        margin-left: 30px;
+    }
+
+    .galeria .contenedor-titulo .info .frase{
+        color: purple
+    }
+
+    .galeria .contenedor-titulo .info h2{
+        font-size: 3rem;
+    }
+
+    .pricing-section {
+        text-align: center;
+        padding: 50px 0;
+    }
+    
+    .pricing-section h2 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+    
+    .pricing-cards {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .card {
+        background-color: #e7e7e7;
+        border-radius: 10px;
+        padding: 20px;
+        padding-bottom: 10px;
+        width: 350px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+    }
+    
+    .card h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: black;
+    }
+    
+    .price {
+        font-size: 28px;
+        color: #ff6347;
+        margin-bottom: 20px;
+    }
+    
+    .card ul {
+        list-style-type: none;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    
+    .card ul li {
+        background: url('checkmark.png') no-repeat left center;
+        font-size: 18px;
+        padding-left: 25px;
+        margin-bottom: 10px;
+        color: black;
+    }
+    
+    .ins {
+        display: inline-block;
+        background-color: #ff6347;
+        color: #fff;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+    
+    .ins:hover {
+        background-color: #ff4500;
+    }
+    /* SECCION EQUIPO */
+
+    .equipo {
+        max-width: 1100px;
+        margin: auto;
+        padding-top: 100px;
+        background-color: #dde1e9;
+    }
+
+    .equipo .contenedor-titulo{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .equipo .contenedor-titulo .numero{
+        color: purple;
+        font-weight: bold;
+        display: block;
+        font-size: 5rem;
+    }
+
+    .equipo .contenedor-titulo .info{
+        margin-left: 30px;
+    }
+
+    .equipo .contenedor-titulo .info .frase{
+        color: purple
+    }
+
+    .equipo .contenedor-titulo .info h2{
+        font-size: 3rem;
+    }
+
+    .equipo .fila {
+        margin: 50px 0;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .equipo .fila .col{
+        width: 25%;
+    }
+
+    .equipo .fila .col img{
+        max-height: 400px;
+        display: block;
+        margin: auto;
+    }
+
+    .equipo .fila .info{
+        border: 5px solid #1f283e;
+        text-align: center;
+        border-radius: 5px;
+        padding: 20px;
+        background: linear-gradient(purple, rgb(219, 7, 219));
+        color: #fff;
+    }
+
+    .equipo .fila .info p{
+        margin: 20px 0;
+    }
+
+    .equipo .fila .info a {
+        color: #fff;
+        text-decoration: none;
+        display: inline-block;
+        margin: 0 20px;
+        font-size: 20px;
+    }
+    /* SECCION CONTACTO */
+
+    .contacto {
+        color: #fff;
+        background: linear-gradient(rgba(0,0,0), rgba(255,91,214));
+        background: url(hola.jpeg);
+        background-size: cover;
+        background-position: center center;
+        padding: 100px 20px;
+    }
+
+    .contacto .contenido-seccion{
+        max-width: 800px;
+        margin: auto;
+    }
+    
+    .contacto .contenedor-titulo{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+        margin: auto;
+    }
+
+    .contacto .contenedor-titulo .numero{
+        color: purple;
+        font-weight: bold;
+        display: block;
+        font-size: 5rem;
+    }
+
+    .contacto .contenedor-titulo .info{
+        margin-left: 30px;
+    }
+
+    .contacto .contenedor-titulo .info .frase{
+        color: purple
+    }
+
+    .contacto .contenedor-titulo .info h2{
+    font-size: 3rem;
+    }
+
+    .contacto .fila {
+        display: flex;
+        margin-top: 50px;
+        justify-content: space-between;
+    }
+
+    .contacto .fila .col{
+        width: 40%;
+    }
+
+    .contacto .fila input{
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        outline: none;
+    }
+
+    .contacto textarea{
+        width: 100%;
+        padding: 15px;
+        border: none;
+        border-radius: 5px;
+        font-size: 20px;
+        outline: none;
+        margin-top: 20px;
+        height: 200px;
+    }
+    
+    .contacto button {
+        display: block;
+        width: fit-content;
+        margin: auto;
+        margin-top: 30px;
+        border: none;
+        background: purple;
+        color: #fff;
+        font-size: 18px;
+        padding: 10px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .contacto .fila-datos{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 100px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .contacto i{
+        color: purple;
+        display: inline-block;
+        margin-right: 10px;
+    }
+                        main {
+                            padding: 20px;
+                            background-color: rgba(217, 234, 245, 0.8);
+                            /* Fondo blanco con opacidad */
+                            border-radius: 8px;
+                            max-width: 1200px;
+                            margin: auto;
+                        }
+
+                        footer {
+                            background: #333;
+                            color: #fff;
+                            text-align: center;
+                            padding: 10px 0;
+                            position: fixed;
+                            width: 100%;
+                            bottom: 0;
+                        }
+
+                        .container-icon {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            justify-content: flex-end;
+                        }
+
+                        .icon-cart {
+                            width: 36px;
+                            height: 36px;
+                            cursor: pointer;
+                            fill: white;
+                            transition: transform 0.3s ease;
+                        }
+
+                        .icon-cart:hover {
+                            transform: scale(1.2);
+                        }
+
+                        .count-products {
+                            position: absolute;
+                            top: 10px;
+                            right: 10px;
+                            background-color: rgb(0, 54, 124);
+                            color: rgb(255, 255, 255);
+                            border-radius: 50%;
+                            padding: 3px 7px;
+                            font-size: 12px;
+                        }
+
+                        /* Carrito */
+                        .container-cart-products {
+                            position: absolute;
+                            top: 50px;
+                            right: 0;
+                            background-color: white;
+                            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                            width: 300px;
+                            max-height: 400px;
+                            overflow-y: auto;
+                            padding: 10px;
+                            border-radius: 4px;
+                            transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+                            transform: translateY(-20px);
+                            opacity: 0;
+                            pointer-events: none;
+                        }
+
+                        .container-cart-products.show {
+                            transform: translateY(0);
+                            opacity: 1;
+                            pointer-events: auto;
+                        }
+
+                        .hidden-cart {
+                            display: none;
+                        }
+
+                        /* Search */
+                        .search-container {
+                            padding: 20px;
+                            display: flex;
+                            justify-content: center;
+                        }
+
+                        .search-container input[type="text"] {
+                            width: 80%;
+                            padding: 10px;
+                            font-size: 16px;
+                            border: 2px solid #333;
+                            border-radius: 4px;
+                        }
+
+                        /* Main */
+                        .container-items {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+                            gap: 20px;
+                            padding: 20px;
+                            background-color: rgba(217, 234, 245, 0.8);
+                            /* Fondo blanco con opacidad */
+                            border-radius: 8px;
+                        }
+
+                        .item {
+                            background-color: white;
+                            border: 1px solid #ddd;
+                            border-radius: 8px;
+                            padding: 10px;
+                            width: 250px;
+                            box-shadow: 0 4px 8px #ec0e0e1a;
+                            text-align: center;
+                            transition: transform 0.3s ease;
+                            box-sizing: border-box;
+                        }
+
+                        .item:hover {
+                            transform: scale(1.05);
+                        }
+
+                        .item figure {
+                            margin: 0;
+                            padding: 0;
+                            height: 200px;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                        }
+
+                        .item img {
+                            max-width: 100%;
+                            max-height: 100%;
+                            border-radius: 8px;
+                            object-fit: cover;
+                        }
+
+                        .info-product h2 {
+                            margin: 10px 0;
+                            font-size: 20px;
+                            color: #333;
+                        }
+
+                        .info-product p {
+                            margin: 5px 0;
+                            font-size: 18px;
+                            font-weight: bold;
+                            color: #333;
+                        }
+
+                        .info-product button {
+                            background-color: #333;
+                            color: white;
+                            border: none;
+                            padding: 10px 15px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        .info-product button:hover {
+                            background-color: #555;
+                        }
+
+                        /* Carrito */
+                        .product-in-cart {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 5px 0;
+                        }
+
+                        .product-name {
+                            font-size: 16px;
+                        }
+
+                        .product-quantity {
+                            margin: 0 10px;
+                            font-size: 16px;
+                            font-weight: bold;
+                        }
+
+                        .product-price {
+                            font-size: 16px;
+                            color: #333;
+                        }
+
+                        .cart-total {
+                            display: flex;
+                            justify-content: space-between;
+                            margin-top: 10px;
+                        }
+
+                        .cart-total h3 {
+                            font-size: 18px;
+                        }
+
+                        .total-pagar {
+                            font-size: 18px;
+                            font-weight: bold;
+                        }
+
+                        #go-to-checkout {
+                            background-color: #333;
+                            color: white;
+                            border: none;
+                            padding: 10px 15px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            width: 100%;
+                            margin-top: 10px;
+                            transition: background-color 0.3s ease;
+                        }
+
+                        #go-to-checkout:hover {
+                            background-color: #555;
+                        }
+
+                        .increase-quantity,
+                        .decrease-quantity,
+                        .remove-product {
+                            background-color: #333;
+                            color: white;
+                            border: none;
+                            padding: 5px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            transition: background-color 0.3s ease;
+                            font-size: 14px;
+                        }
+
+                        .increase-quantity:hover,
+                        .decrease-quantity:hover,
+                        .remove-product:hover {
+                            background-color: #555;
+                        }
+
+                        .hidden-cart {
+                            display: none;
+                        }
+
+                        .cart-item {
+                            padding: 10px;
+                            border-bottom: 1px solid #ccc;
+                        }
+
+                        .icon-cart {
+                            cursor: pointer;
+                        }
+                        /* Estilo general para la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Estilo para las celdas */
+td {
+    padding: 20px;
+    vertical-align: top;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+/* Iconos de las celdas (agrega tu propia clase de iconos) */
+td i {
+    font-size: 30px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Título de las celdas */
+h3 {
+    font-size: 20px;
+    color: #e74c3c;
+    margin-bottom: 10px;
+}
+
+/* Párrafos dentro de las celdas */
+p {
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Colores para los títulos en rojo */
+.txtRojo {
+    color: purple;
+    font-weight: bold;
+}
+
+/* Estilo para hacer responsiva la tabla */
+@media screen and (max-width: 768px) {
+    table, td {
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        margin-bottom: 20px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+/* Fondo para cada celda */
+td {
+    background-color: #f9f9f9;
+}
+
+/* Sombra para darle un efecto más moderno */
+td {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Espaciado entre las filas */
+tr {
+    margin-bottom: 20px;
+}
+    /* FOOTER */
+
+    footer {
+        background: #151623;
+        padding: 30px 0;
+    }
+
+    footer .info{
+        display: flex;
+        max-width: 1100px;
+        margin: auto;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    footer .info p{
+        color: #797e8e;
+    }
+
+    footer .info a{
+        text-decoration: none;
+        color: #797e8e;
+        display: inline-block;
+        margin: 0 15px;
+    }
+    
+    .nav-responsive {
+        display: none;
+    }
+        </style>
+    <title>MANZANARES</title>
+</head>
+<body>
+    <title>MANZANARES</title>
+</head>
+<body>
+    <!-- MENÚ -->
+    <div class="contenedor-header">
+        <header>
+            <h1>MANZANARES<span class="txtRojo">STORE</span></h1>
+            <nav id="nav">
+                <a href="principal.html" onclick="seleccionar()"> INICIO </a>
+                <a href="#nosotros" onclick="seleccionar()"> NOSOTROS </a>
+                <a href="#servicios" onclick="seleccionar()"> SERVICIOS </a>
+                <a href="#comodidades" onclick="seleccionar()"> ENVÍOS </a>
+                <a href="Contactanos.html" onclick="seleccionar()"> CONTACTO </a>
+                <a href="pago.html" onclick="seleccionar()"> PAGO</a>
+                <a href="http://localhost/proyecto2/html/index.php"> LOGIN</a>
+        
+            </nav>
+            <div class="redes">
+                <a href="https://web.facebook.com/profile.php?id=61552986394771"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></i></a>
+                <a href="https://api.whatsapp.com/send/?phone=3052937060&text&type=phone_number&app_absent=0" target="_blank"><i
+                    class="fa-brands fa-whatsapp"></i></i></a>
+                <a href="./productos.php"><i class="fa-solid fa-cart-shopping"></i></a><sub id="counter-cart"></sub>
+            <div class="nav-responsive" id="icono-nav" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </header>
+    </div>
+    <!-- INICIO -->
+    <section id="inicio" class="inicio">
+        <div class="contenido-seccion">
+            <div class="info">
+                <h2>LOS MEJORES PRODUCTOS<span class="txtRojo"><br>A UN GRAN PRECIO </span></h2>
+                <br>
+                <p>¡Adquiere lo mejor para un resultado superior! </p>
+                <br>
+                <a href="#nosotros" class="btn-mas">
+                    <i class="fa-solid fa-circle-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION NOSOTROS -->
+    <section id="nosotros" class="nosotros">
+        <img id="img-nosotros" src="../img/25.jpeg" alt="nosotros">
+        <div class="fila">
+            <div class="col">
+                <img style="width: 80%;" src="../img/WhatsApp Image 2024-08-23 at 12.16.41 PM.jpeg" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                    </div>
+                    <div class="info">
+                        <span class="frase"> SOBRE </span>
+                        <h2> NOSOTROS</h2>
+                    </div>
+                    <br>
+                </div>
+                <br>
+                <p class="p-especial">Nagarakustore es una empresa especializada en ofrecer productos de alta calidad
+                    diseñados para resaltar la belleza natural de cada persona. Nuestro catálogo incluye una amplia
+                    variedad de estilos, desde pestañas naturales hasta opciones más dramáticas, todas hechas con
+                    materiales de primera, para garantizar comodidad y durabilidad.</p>
+                <p>¡Disfruta de las mejores pestañas del mundo!</p>
+            </div>
+        </div>
+        <hr>
+        <div class="fila-nosotros">
+    </section>
+    <!-- SECCION SERVICIOS -->
+    <section id="servicios" class="servicios">
+        <div class="contenido-servicios">
+            <div class="flex-container">
+                <div id="tabla">
+                    <table>
+                        <tr>
+                            <td>
+                                <h3><span class="txtRojo"> Pestañas </span></h3>
+                                <p>Descubre nuestras pestañas para cada ocasión, incluyendo opciones mixtas para un look
+                                    natural y voluminoso, ocho tonos vibrantes, pestañas YY con efecto llamativo, 3D
+                                    para un estilo más pronunciado, elegantes pestañas Lash y mixtas en L para una intensidad
+                                    única. ¡Realza tu mirada!
+                                </p>
+                            </td>
+                            <td>
+                                <h3><span class="txtRojo"> Pinzas </span></h3>
+                                <p>Ofrecemos una variedad de pinzas para la colocación de pestañas, incluyendo pinzas
+                                    curvas y rectas de la marca Nagarakustore, así como la N-06 para volumen. También
+                                    disponemos de pinzas económicas, tanto curvas como rectas, y de pinzas Venus,
+                                    perfectas para la extensión de pestañas de volumen ruso, asegurando opciones para
+                                    todas las necesidades y presupuestos.</p>
+                            </td>
+                            <td>
+                                <h3><span class="txtRojo"> Pegantes </span> </h3>
+                                <p>Disponemos de insumos de pegantes resistentes al agua, como el profesional Sky Red 5G
+                                    y el profesional Sky Rose 5G, ambos con un tiempo de secado de 0.5 a 2 segundos,
+                                    asegurando una aplicación rápida y duradera para tus pestañas.</p>
+                            </td>
+                        </tr>   
+                        <tr>
+                            <td>
+                                <h3><span class="txtRojo"> Removedor </span></h3>
+                                <p>
+                                    Los removedores de extensiones de pestañas son productos esenciales para mantener la salud de tus pestañas naturales mientras eliminas las extensiones de forma segura y eficaz con nuestros tipos de removedores como Pink Gel y Navina.
+                                </p>
+                            </td>
+                            <td>
+                                <h3><span class="txtRojo"> Cepillos </span></h3>
+                                <p>Ofrecemos cepillos tipo pestañina para mantener tus pestañas separadas, limpias y
+                                    organizadas, disponibles en colores vibrantes como rosa, morado y negro brillante.
+                                    Además, para quienes prefieren llevar sus cepillos a todas partes, contamos con
+                                    cepillos en elegantes tarros de lujo.</p>
+                            </td>
+                            <td>
+                                <h3><span class="txtRojo"> Henna </span></h3>
+                                <p>Con la henna para cejas y el tinte de pestañas Beauty Plus, puedes disfrutar de un look fresco y natural que resalta tus rasgos. Estos productos son ideales para quienes buscan realzar su belleza de manera fácil y efectiva.</p>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION ENVIOS -->
+    <section id="comodidades" class="comodidades">
+        <div class="fila">
+            <div class="col">
+                <img style="width: 95%;" src="../img/WhatsApp Image 2024-09-26 at 7.43.37 PM.jpeg" alt="">
+            </div>
+            <div class="col">
+                <div class="contenedor-titulo">
+                    <div class="numero">
+                    </div>
+                    <div class="info">
+                        <span class="frase">EN MENOS TIEMPO TE LLEGAN TUS</span>
+                        <h2>ENVÍOS</h2>
+                    </div>
+                </div>
+                <ul>
+                    Nos comprometemos a ofrecer a nuestros clientes un servicio de envío eficiente y confiable. A continuación, detallamos nuestra política de envíos para asegurar que estés bien informado sobre nuestras opciones.
+                    <h2> <span>Entrega a domicilio</span> </h2> Recibe tu pedido en la puerta de tu casa en un plazo de 1 a 2 días hábiles. Este servicio es ideal para aquellos que desean comodidad y rapidez.
+                    <br>
+                    <h2> <span>Recogida en tienda</span> </h2> Si prefieres, puedes hacer tu pedido en línea y recogerlo directamente en nuestra tienda, evitando así costos de envío y disfrutando de tu compra de inmediato.
+                    <br>
+                    <h2> <span>Cobertura Nacional </span> </h2> Además de nuestro servicio local, realizamos envíos a todo el país. Trabajamos con transportadoras confiables para asegurar que tus pedidos lleguen a tiempo, sin importar la distancia.     
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- SECCION PLANES Y SERVICIOS -->
+    <section id="planes-y-servicios" class="galeria">
+        <div class="contenido-seccion">
+            <div class="contenedor-titulo">
+
+
+                <div class="numero">
+                    MÁS VENDIDO
+                </div>
+                <div class="inf">
+
+                    <div class="info-product">
+                        <h2></h2>
+                        <p class="price"></p>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                    <img src="../img/pestañas/01.jpg" alt="producto" />
+                    </figure>
+                    <div class="info-product">
+                        <h2>Pestañas</h2>
+                         <p class="price">$20</p>
+
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="../img/otros/13.jpeg" alt="producto" />
+                    </figure>
+                    <div class="info-product">
+                        <h2>Otros</h2>
+                        <p class="price">$50</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="../img/pinzas/19.jpeg" alt="producto" />
+                    </figure>
+                    <div class="info-product">
+                        <h2>Pinzas</h2>
+                        <p class="price">$90</p>                    </div>
+                </div>
+                <div class="item">
+                    <figure>
+                        <img src="../img/pegantes/05.jpg" />
+                    </figure>
+                    <div class="info-product">
+                        <h2>Pegantes</h2>
+                        <p class="price">$50</p>
+
+                    </div>
+                </div>
+            </div>
+            <script src="x.js"></script>
+            <script src="index2.js"></script>
+        </div>
+        </div>
+
+        <section class="pricing-section">
+            <div class="pricing-cards">
+        </section>
+
+    </section>
+
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    </section>
+    <footer>
+        <div class="info">
+            <p>2023 - <span class="txtRojo">nagarakustore</span>Todos los derechos reservados</p>
+            <div class="redes">
+                <a href="https://web.facebook.com/profile.php?id=61552986394771"><i
+                        class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i
+                        class="fa-brands fa-instagram"></i></i></a>
+            </div>
+        </div>
+    </footer>
+    <link rel="stylesheet" href="index.css">
+    <script src="carrito.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Payment-Page</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../html/principal.html">
+
+    <!-- Agregar Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilo general */
+        body {
+            font-family: 'roboto','Times New Roman', Times, serif; /* Aplicar la fuente Roboto a todo el cuerpo */
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4; /* Color de fondo */
+        }
+
+        /* Estilo general para el menú */
+        .menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000;
+            padding: 28px 200px;
+            box-shadow: 0 4px 10px white;
+        }
+
+        /* Estilo para el menú */
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        .menu ul li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        .menu ul li a:hover {
+            background-color: #fff;
+            color: #e74c;
+        }
+
+        /* Estilo para redes sociales */
+        .redes {
+            display: flex;
+            align-items: center;
+        }
+
+        .redes a {
+            color: #fff;
+            margin-left: 15px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .redes a:hover {
+            color: #fff;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        /* Estilo para el formulario */
+        .container {
+            padding: 20px;
+        }
+
+        .title {
+            font-weight: 700; /* Negrita para el título */
+            margin-bottom: 10px;
+        }
+
+        .inputBox {
+            margin-bottom: 15px;
+        }
+
+        .inputBox label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .submit_btn {
+            padding: 10px 20px;
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .submit_btn:hover {
+            background-color: #c0392b;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="menu">
+        <h1>NAGARAKU<span class="txtRojo">STORE</span></h1>
+        <nav id="nav">
+            <ul>
+            <li> <a href="principal.html" onclick="seleccionar()"> INICIO </a></li>
+            <li><a href="#nosotros" onclick="seleccionar()"> NOSOTROS </a></li>
+            <li><a href="#servicios" onclick="seleccionar()"> SERVICIOS </a></li>
+            <li><a href="#comodidades" onclick="seleccionar()"> ENVIOS </a></li>
+            <li><a href="Contactanos.html" onclick="seleccionar()"> CONTACTO </a></li>
+            <li><a href="pago.html" onclick="seleccionar()"> PAGO</a></li>
+        </ul>           
+        </nav>
+        <div class="redes">
+            <a href="https://web.facebook.com/profile.php?id=61552986394771" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+            <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="carrito.html"><i class="fa-solid fa-cart-shopping"></i></a><sub id="counter-cart"></sub>
+        </div>
+        </div>
+    </nav>
+    <div class="nav-responsive" id="icono-nav" onclick="mostrarOcultarMenu()">
+        <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="container">
+        <form action="principal.html" method="POST">
+            <div class="row">
+                <div class="col">
+                    <h3 class="title">Dirección de cobro</h3>
+                    <div class="inputBox">
+                        <label for="name">Nombre completo:</label>
+                        <input type="text" id="name" name="full_name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="email">Email:</label>
+                        <input type="text" id="email" name="email" placeholder="Enter email address" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="address">Dirección:</label>
+                        <input type="text" id="address" name="address" placeholder="Enter address" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="city">Ciudad:</label>
+                        <input type="text" id="city" name="city" placeholder="Enter city" required>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="state">Estado:</label>
+                            <input type="text" id="state" name="state" placeholder="Enter state" required>
+                        </div>
+                        <div class="inputBox">
+                            <label for="zip">Zip Code:</label>
+                            <input type="number" id="zip" name="zip" placeholder="123 456" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <h3 class="title">Pago</h3>
+                    <div class="inputBox">
+                        <label for="total">Total a pagar:</label>
+                        <input type="text" id="total" name="total" placeholder="Total pago" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cardName">Nombre en Tarjeta:</label>
+                        <input type="text" id="cardName" name="card_name" placeholder="Enter card name" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cardNum">Numero de tarjeta:</label>
+                        <input type="text" id="cardNum" name="card_number" placeholder="1111-2222-3333-4444" maxlength="19" required>
+                    </div>
+                    <div class="inputBox">
+                        <label for="expMonth">Mes Exp:</label>
+                        <select name="exp_month" id="expMonth" required>
+                            <option value="">Escoger mes</option>
+                            <option value="January">Enero</option>
+                            <option value="February">Febrero</option>
+                            <option value="March">Marzo</option>
+                            <option value="April">Abril</option>
+                            <option value="May">Mayo</option>
+                            <option value="June">Junio</option>
+                            <option value="July">Julio</option>
+                            <option value="August">Agosto</option>
+                            <option value="September">Septiembre</option>
+                            <option value="October">Octubre</option>
+                            <option value="November">Noviembre</option>
+                            <option value="December">Diciembre</option>
+                        </select>
+                    </div>
+                    <div class="flex">
+                        <div class="inputBox">
+                            <label for="expYear">Exp Year:</label>
+                            <select name="exp_year" id="expYear" required>
+                                <option value="">Escoger año</option>
+                                <option value="2023">2023</option>
+                                <option value="2024">2024</option>
+                                <option value="2025">2025</option>
+                                <option value="2026">2026</option>
+                                <option value="2027">2027</option>
+                            </select>
+                        </div>
+                        <div class="inputBox">
+                            <label for="cvv">CVV:</label>
+                            <input type="number" id="cvv" name="cvv" placeholder="1234" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <input type="submit" value="Proceed to Checkout" class="submit_btn">
+        </form>
+    </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+
+</html>

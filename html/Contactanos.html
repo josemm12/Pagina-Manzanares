@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/contactanos.css">
+    <link rel="stylesheet" href="principal.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>NAGARAKUSTORE</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Barlow', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .old-standard-tt-bold {
+            font-family: "Old Standard TT", serif;
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        .old-standard-tt-regular-italic {
+            font-family: "Old Standard TT", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .menu {
+            display: flex; /* Flexbox para alinear el menú y redes sociales */
+            justify-content: space-between; /* Espacio entre menú y redes */
+            align-items: center; /* Alinear verticalmente */
+            background-color: #000;
+            padding: 20px 20px;
+            box-shadow: 0 4px 10px white;
+        }
+
+        .menu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex; /* Mostrar menú horizontal */
+        }
+
+        .menu ul li {
+            display: inline-block;
+            margin-right: 20px;
+            position: relative;
+        }
+
+        .menu ul li a {
+            text-decoration: none;
+            font-size: 18px;
+            color: #fff;
+            padding: 10px 20px;
+            transition: background-color 0.3s, color 0.3s;
+            border-radius: 5px;
+        }
+
+        .menu ul li a:hover {
+            background-color: #fff;
+            color: #e74c3c;
+        }
+
+        /* Estilo para redes sociales */
+        .redes {
+            display: flex;
+            align-items: center;
+        }
+
+        .redes a {
+            color: #fff;
+            margin-left: 15px;
+            font-size: 24px;
+            transition: color 0.3s;
+        }
+
+        .redes a:hover {
+            color: #fff;
+            text-shadow: 0px 0px 5px rgba(255, 255, 255, 0.7);
+        }
+
+        .contact-container {
+            text-align: center;
+            padding: 50px;
+            background-color: #fff; /* Fondo blanco para el formulario */
+            box-shadow: 0 4px 10px white; /* Sombra del contenedor */
+            border-radius: 10px; /* Bordes redondeados */
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form input:focus,
+        .contact-form select:focus {
+            border-color: #e74c3c; /* Color del borde al enfocar */
+            outline: none;
+        }
+
+        .btn {
+            background-color: #e74c3c;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 15px; /* Espacio superior para el botón */
+        }
+
+        .btn:hover {
+            background-color: #c0392b;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .message {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #28a745; /* Color verde para el mensaje */
+            display: none; /* Oculto por defecto */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- MENÚ -->
+    <header>
+        <nav class="menu">
+            <h1>NAGARAKU<span class="txtRojo">STORE</span></h1>
+            <nav id="nav">
+                <ul>
+                <li> <a href="principal.html" onclick="seleccionar()"> INICIO </a></li>
+                <li><a href="#nosotros" onclick="seleccionar()"> NOSOTROS </a></li>
+                <li><a href="#servicios" onclick="seleccionar()"> SERVICIOS </a></li>
+                <li><a href="#comodidades" onclick="seleccionar()"> ENVIOS </a></li>
+                <li><a href="Contactanos.html" onclick="seleccionar()"> CONTACTO </a></li>
+                <li><a href="pago.html" onclick="seleccionar()"> PAGO</a></li>
+            </ul>           
+            </nav>
+            <div class="redes">
+                <a href="https://web.facebook.com/profile.php?id=61552986394771" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/nagarakustore/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <div class="nav-responsive" id="icono-nav" onclick="mostrarOcultarMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <div class="contact-container">
+        <h2>Contáctanos</h2>
+        <p>Estamos aquí para ayudarte. Completa el formulario o utiliza la información de contacto a continuación.</p>
+        
+        <form class="contact-form" id="contactForm" onsubmit="return enviarFormulario(event);">
+            <label for="name">Nombre Completo</label>
+            <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+
+            <label for="email">Correo Electrónico</label>
+            <input type="email" id="email" name="email" placeholder="tuemail@ejemplo.com" required>
+
+            <label for="phone">Teléfono</label>
+            <input type="tel" id="phone" name="phone" placeholder="Tu teléfono (opcional)">
+
+            <label for="subject">Asunto</label>
+            <select id="subject" name="subject" required>
+                <option value="" disabled selected>Selecciona un asunto</option>
+                <option value="general">Consulta General</option>
+                <option value="support">Soporte Técnico</option>
+                <option value="sales">Ventas</option>
+                <option value="other">Otro</option>
+            </select>
+
+            <button type="submit" class="btn">Enviar</button>
+        </form>
+        <div class="message" id="confirmationMessage">Mensaje enviado. ¡Espera nuestro comunicado!</div>
+    </div>
+
+    <script>
+        function enviarFormulario(event) {
+            event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+            document.getElementById('confirmationMessage').style.display = 'block'; // Muestra el mensaje
+            document.getElementById('contactForm').reset(); // Reinicia el formulario
+            return false; // Previene el envío del formulario
+        }
+    </script>
+</body>
+
+</html>
